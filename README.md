@@ -138,7 +138,7 @@ Este arquivo JSON contém os dados que alimentam o aplicativo:
 ## 🖼️ Demonstração
 
 ### Desktop
-![Demonstração Desktop](#)
+![Demonstração Desktop](#https://github.com/user-attachments/assets/e0aa159b-287d-419a-9282-943613b1b249)
 ![image](https://github.com/user-attachments/assets/6cccaebb-f347-4f0c-a340-7611a5d4944b)
 ![image](https://github.com/user-attachments/assets/e0aa159b-287d-419a-9282-943613b1b249)
 
