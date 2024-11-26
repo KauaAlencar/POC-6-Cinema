@@ -1,156 +1,159 @@
-
-# 🎥 **POC 6 - Sistema de Seleção de Assentos**
-
-Este repositório apresenta um sistema de seleção de assentos para cinema, desenvolvido em React. A aplicação simula uma experiência de reserva interativa com funcionalidades como cálculo do valor total, alternância de temas claro/escuro e exibição de informações detalhadas sobre o filme.
+Aqui está um **README** no estilo GitHub para o seu projeto:
 
 ---
 
-### **Status do Projeto**
+# 🎥 Seat Selector - Sistema de Seleção de Assentos
 
-✅ **Projeto Concluído**
-
----
-
-### **Pré-requisitos**
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en/)
-
-Além disso, é recomendado utilizar um editor de texto para trabalhar com o código, como [VSCode](https://code.visualstudio.com/).
+Este é um projeto em React que simula a reserva de assentos em um cinema. Ele inclui funcionalidades como seleção de assentos, cálculo do preço total, alternância entre temas claro e escuro, e exibição de informações do filme. A interface é responsiva e foi projetada para funcionar bem em dispositivos móveis e desktops.
 
 ---
 
-### **🎲 Rodando o Projeto**
+## 🚀 Funcionalidades
 
-```bash
-# Clone este repositório
-$ git clone https://github.com/KauaAlencar/POC-6-Cinema
-
-# Acesse a pasta do projeto no terminal/cmd
-$ cd SeatSelector
-
-# Instale as dependências
-$ npm install
-
-# Execute o servidor de desenvolvimento
-$ npm run dev
-
-# O projeto estará disponível em http://localhost:3000
-```
-
----
-
-### **Estrutura do Projeto**
-
-| **Pasta/Arquivo**            | **Descrição**                                                     |
-|-------------------------------|-------------------------------------------------------------------|
-| `src/components/SeatSelector.jsx` | Componente principal que contém toda a lógica da aplicação.         |
-| `src/styles/SeatSelector.module.css` | Estilos específicos para o componente de seleção de assentos.      |
-| `public/data.json`           | Arquivo JSON que contém as informações do filme e os assentos.   |
-| `src/index.js`               | Ponto de entrada da aplicação React.                             |
-
----
-
-### **Recursos e Funcionalidades**
-
-- **Alternância de Temas:**
-  - Temas claro e escuro configurados automaticamente com base na preferência do sistema.
-  - Personalização de cores com variáveis CSS.
+- **Alternância de Temas:** 
+  - O tema do site se adapta automaticamente ao sistema operacional do usuário (claro ou escuro).
+  - O usuário pode personalizar o tema manualmente.
 
 - **Seleção de Assentos:**
-  - Assentos interativos com três estados: **livre**, **selecionado** e **ocupado**.
-  - Cálculo dinâmico do preço total baseado nos assentos escolhidos.
+  - Botões interativos que representam assentos.
+  - Estados dos assentos: **livre**, **selecionado** e **ocupado**.
+  - O preço total é calculado com base nos assentos selecionados.
 
 - **Informações do Filme:**
-  - Detalhes como título, horário, sinopse, data de lançamento e direção.
+  - Exibe detalhes como título, horário, sinopse, data de lançamento e direção.
 
 - **Responsividade:**
-  - Layout ajustado para dispositivos móveis e desktops (design mobile-first).
+  - Interface adaptada para telas pequenas (mobile-first design).
 
 ---
 
-### **Conteúdo e Uso**
+## 🛠️ Tecnologias Utilizadas
 
-1. **Tema Dinâmico**
-   - O sistema detecta automaticamente o tema do sistema operacional (escuro ou claro) ao carregar.
-   - Cores personalizadas para cada estado dos assentos e elementos da interface.
-
-2. **Seleção de Assentos**
-   - Cada botão representa um assento e muda de cor com base no estado:
-     - **Livre:** Branco (tema escuro) ou cinza (tema claro).
-     - **Selecionado:** Vermelho.
-     - **Ocupado:** Cinza escuro.
-   - A lógica de seleção impede que assentos ocupados sejam escolhidos.
-
-3. **Detalhes do Filme**
-   - Informações carregadas dinamicamente do arquivo `data.json`.
+- **React**: Framework para construção da interface.
+- **CSS Modules**: Estilização local para evitar conflitos.
+- **Fetch API**: Para carregar dados de um arquivo JSON local.
+- **HTML5 + CSS3**: Para estrutura e estilos responsivos.
 
 ---
 
-### **Detalhamento do Código**
+## 📂 Estrutura do Projeto
 
-#### 1. Alternância de Temas
-O tema é definido dinamicamente com base na preferência do sistema do usuário:
-```javascript
-const setTheme = (theme) => {
-  const root = document.documentElement;
-  const lightTheme = { "--bg-color": "#f0f0f0", "--text-color": "#000000", ... };
-  const darkTheme = { "--bg-color": "#1e1e2f", "--text-color": "#ffffff", ... };
-
-  const selectedTheme = theme === "dark" ? darkTheme : lightTheme;
-
-  for (const [key, value] of Object.entries(selectedTheme)) {
-    root.style.setProperty(key, value);
-  }
-};
 ```
-
-#### 2. Seleção de Assentos
-Os estados dos assentos são gerenciados usando `useState`:
-```javascript
-const toggleSeat = (index) => {
-  if (!seats[index]?.disponivel) return;
-
-  const newSelectedSeats = selectedSeats.includes(index)
-    ? selectedSeats.filter((i) => i !== index)
-    : [...selectedSeats, index];
-
-  setSelectedSeats(newSelectedSeats);
-  setTotal(newSelectedSeats.length * data.preco);
-};
-```
-
-#### 3. Carregamento de Dados
-Os dados do filme e assentos são carregados dinamicamente de um JSON:
-```javascript
-useEffect(() => {
-  fetch("/data.json")
-    .then((response) => response.json())
-    .then((jsonData) => {
-      setData(jsonData);
-      setSeats(jsonData.assentos || []);
-    })
-    .catch((error) => console.error("Erro ao carregar os dados:", error));
-}, []);
+📦 SeatSelector
+├── 📂 public
+│   └── data.json  # Dados do filme e dos assentos
+├── 📂 src
+│   ├── 📂 components
+│   │   └── SeatSelector.jsx  # Componente principal
+│   ├── 📂 styles
+│   │   └── SeatSelector.module.css  # Estilos específicos para o componente
+│   └── index.js  # Ponto de entrada da aplicação
+└── README.md  # Documentação do projeto
 ```
 
 ---
 
-### **Colaboradores**
+## 📋 Explicação dos Arquivos
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/KauaAlencar"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/172075258?v=4" width="100px;" alt=""/><br /><sub><b>Kauã Alencar</b></sub></a><br /><a href="https://www.linkedin.com/in/kau%C3%A3-alencar-b15119215/" title="LinkedIn">🚀</a></td>
-  </tr>
-</table>
+### 1. `SeatSelector.jsx`
+Este é o componente principal da aplicação. Ele contém:
+- **Lógica de estados:**
+  - `selectedSeats`: Rastreia os assentos selecionados pelo usuário.
+  - `total`: Calcula o preço total com base nos assentos selecionados.
+  - `data`: Armazena os dados do filme e dos assentos, carregados do arquivo `data.json`.
+- **Funções principais:**
+  - `setTheme(theme)`: Aplica o tema claro ou escuro.
+  - `toggleSeat(index)`: Alterna o estado de um assento entre livre e selecionado.
+  - `updateTotal(newSelectedSeats)`: Atualiza o total com base nos assentos selecionados.
+- **Interface de usuário:**
+  - Botões para assentos interativos.
+  - Botão de compra que exibe o preço total.
+  - Informações detalhadas do filme.
 
 ---
 
-### **📝 Licença**
+### 2. `SeatSelector.module.css`
+Este arquivo contém estilos para o componente `SeatSelector`:
+- **Layout:**
+  - Estilos para o container principal e divisões como `leftContent` e `rightContent`.
+- **Estilização de estados dos assentos:**
+  - `.empty`: Assento disponível.
+  - `.selected`: Assento selecionado.
+  - `.occupied`: Assento ocupado.
+- **Tema escuro/claro:** 
+  - Variáveis CSS são usadas para alternar cores e melhorar a consistência do design.
 
-Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais informações.
+---
+
+### 3. `data.json`
+Este arquivo JSON contém os dados que alimentam o aplicativo:
+```json
+{
+  "titulo": "Filme Exemplo",
+  "horario": "20:00",
+  "preco": 20,
+  "sinopse": "Uma história emocionante de aventura e descoberta.",
+  "dataLancamento": "2023-10-15",
+  "direcao": "Diretor Exemplo",
+  "assentos": [
+    { "id": 1, "disponivel": true },
+    { "id": 2, "disponivel": false },
+    ...
+  ]
+}
+```
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/usuario/SeatSelector.git
+   cd SeatSelector
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+4. Abra o navegador e acesse:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## 🌟 Melhorias Futuras
+- Permitir que o usuário altere manualmente o tema e salve a configuração no navegador.
+- Integração com um backend para salvar reservas de assentos.
+- Adicionar animações ao selecionar assentos.
+
+---
+
+## 🖼️ Demonstração
+
+### Desktop
+![Demonstração Desktop](#)
+
+### Mobile
+![Demonstração Mobile](#)
+
+---
+
+## 📧 Contato
+
+Desenvolvido por **Kauã Alencar**.  
+[GitHub](https://github.com/KauaAlencar) | [LinkedIn](https://www.linkedin.com/in/kau%C3%A3-alencar-b15119215/)  
+
+Se tiver dúvidas ou sugestões, entre em contato! 😊
 
 --- 
 
-Se precisar de mais detalhes ou ajustes, é só avisar! 🚀
+Se precisar de algo a mais, é só avisar! 🚀
