@@ -1,5 +1,5 @@
 
-# 🎥 Seat Selector - Sistema de Seleção de Assentos
+# 🎥 Sistema de Seleção de Assentos
 
 Este é um projeto em React que simula a reserva de assentos em um cinema. Ele inclui funcionalidades como seleção de assentos, cálculo do preço total, alternância entre temas claro e escuro, e exibição de informações do filme. A interface é responsiva e foi projetada para funcionar bem em dispositivos móveis e desktops.
 
