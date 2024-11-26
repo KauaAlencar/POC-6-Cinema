@@ -1,6 +1,10 @@
 Aqui está um **README** no estilo GitHub para o seu projeto:
 
 ---
+### **Status do Projeto**
+
+✅ **Projeto Concluído**
+-----
 
 # 🎥 Seat Selector - Sistema de Seleção de Assentos
 
@@ -109,7 +113,7 @@ Este arquivo JSON contém os dados que alimentam o aplicativo:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/usuario/SeatSelector.git
+   git clone https://github.com/usuario/POC-6-Cinema
    cd SeatSelector
    ```
 
@@ -130,30 +134,37 @@ Este arquivo JSON contém os dados que alimentam o aplicativo:
 
 ---
 
-## 🌟 Melhorias Futuras
-- Permitir que o usuário altere manualmente o tema e salve a configuração no navegador.
-- Integração com um backend para salvar reservas de assentos.
-- Adicionar animações ao selecionar assentos.
-
----
 
 ## 🖼️ Demonstração
 
 ### Desktop
 ![Demonstração Desktop](#)
+![image](https://github.com/user-attachments/assets/6cccaebb-f347-4f0c-a340-7611a5d4944b)
+![image](https://github.com/user-attachments/assets/e0aa159b-287d-419a-9282-943613b1b249)
+
+
 
 ### Mobile
 ![Demonstração Mobile](#)
+![image](https://github.com/user-attachments/assets/dfe11b32-9a81-4de8-ae08-768afd51f5b3)
+![image](https://github.com/user-attachments/assets/7000182a-8c4e-472a-a2db-b8d03cf29dea)
+
 
 ---
 
-## 📧 Contato
+### **Colaboradores**
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/KauaAlencar"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/172075258?v=4" width="100px;" alt=""/><br /><sub><b>Kauã Alencar</b></sub></a><br /><a href="https://www.linkedin.com/in/kau%C3%A3-alencar-b15119215/" title="Linkedin">🚀</a></td>
+    <td align="center"><a href="https://github.com/GuilhermeShinohara"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/180458966?v=4" width="100px;" alt=""/><br /><sub><b>Guilherme Shinohara</b></sub></a><br /><a href="https://github.com/GuilhermeShinohara" title="GitHub">🚀</a></td>
+    <td align="center"><a href="https://github.com/LeoFavaron"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/179886009?v=4" width="100px;" alt=""/><br /><sub><b>Leonardo Favaron</b></sub></a><br /><a href="https://github.com/LeoFavaron" title="GitHub">🚀</a></td>
+      <td align="center"><a href="https://github.com/lucas-ricci-pathbit"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/174811028?v=4" width="100px;" alt=""/><br /><sub><b>Lucas Ricci</b></sub></a><br /><a href="https://github.com/lucas-ricci-pathbit" title="Linkedin">🚀</a></td>
+  </tr>
+</table>
 
-Desenvolvido por **Kauã Alencar**.  
-[GitHub](https://github.com/KauaAlencar) | [LinkedIn](https://www.linkedin.com/in/kau%C3%A3-alencar-b15119215/)  
+---
 
-Se tiver dúvidas ou sugestões, entre em contato! 😊
+### **📝 Licença**
 
---- 
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais informações.
 
-Se precisar de algo a mais, é só avisar! 🚀
