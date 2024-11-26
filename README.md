@@ -138,14 +138,14 @@ Este arquivo JSON contém os dados que alimentam o aplicativo:
 ## 🖼️ Demonstração
 
 ### Desktop
-![Demonstração Desktop](#https://github.com/user-attachments/assets/e0aa159b-287d-419a-9282-943613b1b249)
+![Demonstração Desktop]
 ![image](https://github.com/user-attachments/assets/6cccaebb-f347-4f0c-a340-7611a5d4944b)
 ![image](https://github.com/user-attachments/assets/e0aa159b-287d-419a-9282-943613b1b249)
 
 
 
 ### Mobile
-![Demonstração Mobile](#)
+![Demonstração Mobile]
 ![image](https://github.com/user-attachments/assets/dfe11b32-9a81-4de8-ae08-768afd51f5b3)
 ![image](https://github.com/user-attachments/assets/7000182a-8c4e-472a-a2db-b8d03cf29dea)
 
